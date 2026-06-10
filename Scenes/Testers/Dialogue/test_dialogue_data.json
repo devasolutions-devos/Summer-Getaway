@@ -1,0 +1,53 @@
+{
+	"states": [
+		{
+			"required_flag": "rock_removed",
+			"start": "thanks"
+		},
+		{
+			"required_flag": "old_man_requested_rock",
+			"start": "waiting"
+		},
+		{
+			"start": "start"
+		}
+	],
+
+	"nodes": {
+		"start": {
+			"speaker": "Old Man",
+			"portrait": "res://Assets/placeholder/placeholder_old_man.png",
+			"text": "Please remove the cursed rock from the road.",
+			"set_flag": "old_man_requested_rock",
+			"next": "end"
+		},
+
+		"waiting": {
+			"speaker": "Old Man",
+			"portrait": "res://Assets/placeholder/placeholder_old_man.png",
+			"text": "The rock is still blocking the path.",
+			"choices": [
+				{
+					"text": "remove rock",
+					"next": "thanks"
+				},
+				{
+					"text": "do nothing",
+					"next": "end"
+				}
+			]
+		},
+	
+		"thanks": {
+			"speaker": "Old Man",
+			"portrait": "res://Assets/placeholder/placeholder_old_man.png",
+			"text": "Thank you. The path is clear now.",
+			"set_flag": "rock_removed",
+			"next": "end"
+		},
+		
+		"end": {
+			"end": true
+		}
+	}
+}
