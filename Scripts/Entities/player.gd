@@ -54,16 +54,18 @@ func check_for_new_move() -> void:
 
 	if Input.is_action_pressed("walk_right"):
 		input_dir = Vector2.RIGHT
-		$AnimatedSprite2D.play("walk_right")
+		$AnimatedSprite2D.play("walk_side")
+		animated_sprite_2d.flip_h=false
 	elif Input.is_action_pressed("walk_left"):
 		input_dir = Vector2.LEFT
-		$AnimatedSprite2D.play("walk_right")
+		$AnimatedSprite2D.play("walk_side")
+		animated_sprite_2d.flip_h=true
 	elif Input.is_action_pressed("walk_down"):
 		input_dir = Vector2.DOWN
-		$AnimatedSprite2D.play("walk_right")
+		$AnimatedSprite2D.play("walk_down")
 	elif Input.is_action_pressed("walk_up"):
 		input_dir = Vector2.UP
-		$AnimatedSprite2D.play("walk_right")
+		$AnimatedSprite2D.play("walk_up")
 	
 	if input_dir == Vector2.ZERO:
 		idle_player()

@@ -432,6 +432,7 @@ collision_mask = 0
 position = Vector2(0, 176)
 
 [node name="the map refrence" type="Sprite2D" parent="." unique_id=1447809263]
+visible = false
 modulate = Color(1, 1, 1, 0.18431373)
 position = Vector2(8.999999, 536)
 scale = Vector2(1.9475739, 1.9475739)
