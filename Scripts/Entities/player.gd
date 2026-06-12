@@ -17,7 +17,6 @@ enum PlayerState {
 
 
 @export_category("Movement")
-@export var grid_size: int = 16
 @export_subgroup("Speed")
 @export var base_speed := 50.0
 @export var min_speed: float = 25.0
@@ -55,12 +54,16 @@ func check_for_new_move() -> void:
 
 	if Input.is_action_pressed("walk_right"):
 		input_dir = Vector2.RIGHT
+		$AnimatedSprite2D.play("walk_right")
 	elif Input.is_action_pressed("walk_left"):
 		input_dir = Vector2.LEFT
+		$AnimatedSprite2D.play("walk_right")
 	elif Input.is_action_pressed("walk_down"):
 		input_dir = Vector2.DOWN
+		$AnimatedSprite2D.play("walk_right")
 	elif Input.is_action_pressed("walk_up"):
 		input_dir = Vector2.UP
+		$AnimatedSprite2D.play("walk_right")
 	
 	if input_dir == Vector2.ZERO:
 		idle_player()
@@ -75,7 +78,7 @@ func start_move(direction: Vector2) -> void:
 	moving_direction = direction
 	facing_direction = Helpers.movement_direction_to_string(direction)
 
-	target_position = global_position + direction * grid_size
+	target_position = global_position + direction
 	if not _can_walk_to(target_position):
 		target_position = global_position
 		idle_player()

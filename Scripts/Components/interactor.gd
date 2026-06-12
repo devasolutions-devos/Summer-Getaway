@@ -6,7 +6,7 @@ var user: CharacterBody2D
 
 func _ready() -> void:
 	user = get_parent()
-	user.interact.connect(_signal_interactable)
+#	user.interact.connect(_signal_interactable)
 
 
 func _signal_interactable() -> void:
