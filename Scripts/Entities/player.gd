@@ -124,15 +124,29 @@ func _can_walk_to(world_position: Vector2) -> bool:
 
 
 func _play_direction_animation(prefix: String) -> void:
-	var animation_direction := facing_direction
 	animated_sprite_2d.flip_h = false
 
-	if animation_direction == "left":
-		animation_direction = "right"
-		animated_sprite_2d.flip_h = true
-	elif animation_direction == "":
-		animation_direction = "down"
+	if prefix == "walk":
+		match facing_direction:
+			"left":
+				animated_sprite_2d.flip_h = true
+				animated_sprite_2d.play("walk_side")
+			"right":
+				animated_sprite_2d.play("walk_side")
+			"up":
+				animated_sprite_2d.play("walk_up")
+			_:
+				animated_sprite_2d.play("walk_down")
+	else:
+		var animation_direction := facing_direction
 
-	var animation_name := "%s_%s" % [prefix, animation_direction]
-	if animated_sprite_2d.animation != animation_name:
-		animated_sprite_2d.play(animation_name)
+		if animation_direction == "left":
+			animation_direction = "right"
+			animated_sprite_2d.flip_h = true
+		elif animation_direction == "":
+			animation_direction = "down"
+
+		var animation_name := "%s_%s" % [prefix, animation_direction]
+
+		if animated_sprite_2d.animation != animation_name:
+			animated_sprite_2d.play(animation_name)

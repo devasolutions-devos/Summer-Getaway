@@ -20,9 +20,8 @@ shape = SubResource("CircleShape2D_4ntmi")
 position = Vector2(0, -8)
 scale = Vector2(0.5, 0.5)
 sprite_frames = ExtResource("3_a1rq5")
-animation = &"walk_side"
+animation = &"idle_right"
 autoplay = "idle_down"
-frame_progress = 0.4335777
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=629478706]
 zoom = Vector2(4, 4)
