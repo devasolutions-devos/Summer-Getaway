@@ -19,9 +19,9 @@ enum PlayerState {
 @export_category("Movement")
 @export var grid_size: int = 16
 @export_subgroup("Speed")
-@export var base_speed := 50.0
-@export var min_speed: float = 25.0
-@export var max_speed: float = 100.0
+@export var base_speed := 80.0
+@export var min_speed: float = 40.0
+@export var max_speed: float = 160.0
 var speed: float = base_speed
 var moving_direction: Vector2
 var facing_direction: String
