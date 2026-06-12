@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="Summer-Getaway"
+config/name="Summer-Getaway2"
 run/main_scene="res://Scenes/Worlds/Levels/island.tscn"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 

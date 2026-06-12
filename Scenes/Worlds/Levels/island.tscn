@@ -425,7 +425,6 @@ tile_set = ExtResource("2_6cy2b")
 [node name="DetailTiles" type="Node2D" parent="." unique_id=645645802]
 
 [node name="WaterBlockers" type="StaticBody2D" parent="." unique_id=51503418]
-visible = false
 collision_layer = 2
 collision_mask = 0
 
@@ -437,3 +436,6 @@ modulate = Color(1, 1, 1, 0.18431373)
 position = Vector2(8.999999, 536)
 scale = Vector2(1.9475739, 1.9475739)
 texture = ExtResource("2_r5tus")
+
+[node name="qq" type="Node2D" parent="." unique_id=816234114]
+position = Vector2(-104, 197)
