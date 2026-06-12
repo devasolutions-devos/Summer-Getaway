@@ -16,13 +16,13 @@ config/features=PackedStringArray("4.6", "GL Compatibility")
 
 [autoload]
 
-Helpers="*uid://c0twhblsjel4p"
-GameState="*uid://bpfeiksga5w0a"
+Helpers="*res://Global/Helpers.gd"
+GameState="*res://Global/GameState.gd"
 DaySystem="*res://Global/day_system.gd"
 AccusationSystem="*res://Global/accusation_system.gd"
-GameEvents="*uid://dujfiroijr18g"
-BuildingData="*uid://cn0614at5x8rl"
-FlagRegistry="*uid://cm156pgaikll"
+GameEvents="*res://Global/GameEvents.gd"
+BuildingData="*res://Scripts/Buildings/BuildingData.gd"
+FlagRegistry="*res://Global/FlagRegistry.gd"
 
 [global_group]
 
