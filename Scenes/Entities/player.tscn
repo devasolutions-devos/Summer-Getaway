@@ -20,16 +20,10 @@ shape = SubResource("CircleShape2D_4ntmi")
 position = Vector2(0, -8)
 scale = Vector2(0.5, 0.5)
 sprite_frames = ExtResource("3_a1rq5")
-animation = &"idle_down"
+animation = &"idle_left"
 autoplay = "idle_down"
 
-[node name="FollowCamera" type="Camera2D" parent="." unique_id=1569728764]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=629478706]
 zoom = Vector2(4, 4)
 position_smoothing_enabled = true
-position_smoothing_speed = 8.0
-drag_horizontal_enabled = true
-drag_vertical_enabled = true
-drag_left_margin = 0.6
-drag_top_margin = 0.6
-drag_right_margin = 0.6
-drag_bottom_margin = 0.6
+rotation_smoothing_enabled = true
