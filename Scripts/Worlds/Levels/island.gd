@@ -193,10 +193,11 @@ func _add_tree_details() -> void:
 		child.queue_free()
 
 	var tree_cells := [
-		Vector2i(-19, 390), Vector2i(115, 397), Vector2i(-24, -3),
-		Vector2i(-104, 197), Vector2i(-6, -12), Vector2i(5, -13),
-		Vector2i(7, -3), Vector2i(18, 5), Vector2i(23, -2),
-		Vector2i(32, -5), Vector2i(38, 4), Vector2i(2, 12),
+		Vector2i(-2, 24), Vector2i(7, 25), Vector2i(-33, 30),
+		Vector2i(-43, 30), Vector2i(-50, 25), Vector2i(-57, 23),
+		Vector2i(-58, 10), Vector2i(-54, -2), Vector2i(-49, -7),
+		Vector2i(-57, -13), Vector2i(-32, -6), Vector2i(-17, -7),
+		Vector2i(-6, -14), Vector2i()
 	]
 
 	for cell in tree_cells:
